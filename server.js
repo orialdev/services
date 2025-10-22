@@ -14,7 +14,8 @@ app.get("/analytics", (req, res) => {
     script: req.query.a_reading || "unknown",
     gameName: req.query.a_game || "unknown",
     gameId: req.query.a_gameId || "unknown",
-    userId: req.query.a_uqid || "unknown",
+    jobId: req.query.a_jobId || "unknown",
+    playerId: req.query.a_playerId || "unknown",
     executor: req.query.a_exec || "unknown"
   };
   fs.appendFileSync("analytics_log.json", JSON.stringify(data) + "\n");
